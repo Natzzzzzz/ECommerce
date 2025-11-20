@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavTextStyle" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">10sp</item>  <!-- Giảm kích thước chữ -->
+        <item name="android:maxLines">2</item>  <!-- Cho phép tối đa 2 dòng -->
+
+    </style>
+</resources>

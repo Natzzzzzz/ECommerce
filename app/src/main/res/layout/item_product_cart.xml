@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgCartItem"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/background_attribute_value_selected"
+            android:padding="5dp"
+            android:src="@drawable/apple_watch" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:maxHeight="50dp"
+                    android:maxLines="2"
+                    android:text="Iphone 15 Pro Max"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/txtoriginalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24.56"
+                        android:textColor="#888888"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/txtsellingPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24.56"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvAttribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="4"
+                android:ellipsize="end"
+                android:maxHeight="50dp"
+                android:maxLines="2"
+                android:text="Iphone 15 Pro Max"
+                android:textSize="15dp"
+                android:textColor="@color/grey_3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="4">
+
+                    <ImageButton
+                        android:id="@+id/decreaseQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_horizontal_rule_24" />
+
+                    <TextView
+                        android:id="@+id/tvquantity"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textSize="18sp" />
+
+
+                    <ImageButton
+                        android:id="@+id/increaseQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_add_24" />
+
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/imgDeleteItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="right"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_delete_24" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_2"/>
+
+</LinearLayout>

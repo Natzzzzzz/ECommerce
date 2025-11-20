@@ -1,0 +1,81 @@
+package com.example.ecommerce.network
+
+import com.example.ecommerce.model.Category
+import com.example.ecommerce.model.ImageItem
+import com.example.ecommerce.model.LoginRequest
+import com.example.ecommerce.model.LoginResponse
+import com.example.ecommerce.model.Product
+import com.example.ecommerce.model.ProductResponse
+import com.example.ecommerce.model.SearchSuggestionResponse
+import retrofit2.Call
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.POST
+import retrofit2.http.Query
+
+interface ApiInterface {
+
+    //Login
+    @POST("auth/login")
+    fun login(@Body request: LoginRequest): Call<LoginResponse>
+
+    //Add to cart
+    @POST("api/cart/add")
+    fun addToCart(
+        @Header("Authorization") token: String,  // Thêm token vào header
+        @Body request: AddToCartRequest
+    ): Call<AddToCartResponse>
+
+    //Ads
+    @GET("ads/active")
+    suspend fun getDataAds(): List<ImageItem>
+
+    //Categories
+    @GET("categories/")
+    suspend fun getDataCategories(): List<Category>
+
+
+    //Get Product by Category
+    @GET("products/category")
+    suspend fun getProductsByCategory(
+        @Query("categoryID") type: String,
+        @Query("page") page: Int,
+        @Query("limit") limit: Int
+    ): List<Product>
+
+    //Get Popular Product 2023
+    @GET("products/popular2023")
+    suspend fun getDataPProduct(): List<Product>
+
+    //Get Furniture Collection
+    @GET("products/top-selling")
+    suspend fun getDataFurniture(): List<Product>
+
+    //Get New Shoes Collection
+    @GET("products/top-selling")
+    suspend fun getDataNewShoes(): List<Product>
+
+    //Get Top Selling
+    @GET("products/top-selling")
+    suspend fun getDataTopSelling(): List<Product>
+
+    @GET("products/popular2023")
+    suspend fun getDataAllProduct(): List<Product>
+
+    //Filter Search
+    @GET("search/suggestions")
+    suspend fun searchSuggestion(
+        @Query("keyword") keyword: String
+    ): Response<SearchSuggestionResponse>
+
+    //Filter Search
+    @GET("products/search")
+    suspend fun searchProducts(
+        @Query("keyword") keyword: String,
+        @Query("page") page: Int,
+        @Query("limit") limit: Int
+    ): Response<List<Product>>
+
+}

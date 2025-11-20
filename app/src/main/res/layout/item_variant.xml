@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/imgVariant"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="start"
+        android:layout_weight="1"
+        android:src="@drawable/apple_watch"
+        android:padding="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/background_attribute_value_selected"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tvNameVariant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Iphone 15 Pro Max"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStockVariant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stock: 50"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>
